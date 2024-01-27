@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import Countries from './Countries/Countries';
+import Countries from './Components/Countries';
 
 function App() {
   const [count, setCount] = useState(0)
