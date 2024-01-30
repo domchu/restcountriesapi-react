@@ -27,7 +27,24 @@ const Countries = () => {
         </h1>
       ) : (
         <section className="container mx-auto p-8">
-          {/* form */}
+          {/* FORM */}
+          <div>
+            <form>
+              <input
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Search for a country by its name"
+                required
+                className="py-2 px-4 text-gray-800 placeholder-gray-800"
+              />
+            </form>
+            <form>
+              <select name="filter-by-region" id="filter-by-region">
+                {/* optional */}
+              </select>
+            </form>
+          </div>
           {/* COUNTRIE */}
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {countries.map((country) => (
