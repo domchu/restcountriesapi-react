@@ -18,6 +18,12 @@ const SingleCountry = () => {
     };
     getSingleCountry();
   }, [name]);
+
+  // CHANGING THE TITLE OF EACH COUNTRY
+  useEffect(() => {
+    document.title = `Countries | ${name}`;
+  }, [name]);
+
   return (
     <>
       <section className="p-8 md:py-0">
@@ -25,7 +31,7 @@ const SingleCountry = () => {
           return (
             <article
               key={item.population}
-              className="grid grid-cols-1 gap-8 md:grid-cols-2 md:place-items-center h-screen"
+              className="grid grid-cols-1 gap-4 md:grid-cols-2 md:place-items-center h-screen"
             >
               <img src={item.flags.svg} alt={item.name.common} />
               <article>
