@@ -27,7 +27,7 @@ const Countries = () => {
     },
   ];
 
-  // SEARCH COUNTRIES
+  // SEARCH INPUT FOR THE COUNTRIES
   const searchCountry = async () => {
     try {
       const res = await fetch(
@@ -69,7 +69,7 @@ const Countries = () => {
       try {
         const res = await fetch(RESTCOUNTRIESAPI);
         const data = await res.json();
-        setCountries(data.slice(0, 10));
+        setCountries(data);
         // console.log(data);
       } catch (error) {
         console.error(error);
@@ -88,7 +88,13 @@ const Countries = () => {
       ) : (
         <section className="container mx-auto p-8">
           {/* FORM AT THE TOPNAV*/}
+          {/*  */}
+          <h1>Where is the world!</h1>
           <div>
+            <h2>Dark Mode</h2>
+          </div>
+          {/* Dark mode */}
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8 lg:justify-between">
             <form
               onSubmit={handleSearchCountry}
               autocomplete="off"
@@ -102,7 +108,7 @@ const Countries = () => {
                 onChange={(e) => setSearchText(e.target.value)}
                 placeholder="Search for a country by its name"
                 required
-                className="py-2 px-4 text-gray-800 placeholder-gray-800"
+                className="py-3 px-4 text-gray-600 placeholder-gray-600 w-full shadow rounded outline-none dark:text-gray-400 dark:placeholder-gray-400 dark:bg-gray-800 dark:focus:bg-gray-700 transition-all durstion-200"
               />
             </form>
             {/* FILTER SECTION */}
@@ -110,6 +116,7 @@ const Countries = () => {
               <select
                 name="filter-by-region"
                 id="filter-by-region"
+                className="w-52 py-3 outline-none shadow rounded text-gray-600 dark:text-gray-400 dark:bg-gray-800 dark:focus:bg-gray-700"
                 value={regions.name}
                 onChange={(e) => filterByRegion(e.target.value)}
               >
