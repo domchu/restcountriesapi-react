@@ -1,14 +1,8 @@
 import { useState } from "react";
 import Moon from "../assets/moon.svg";
-// import * as ReactDOM from 'react-dom';
-// import { DarkModeSwitch } from 'react-toggle-dark-mode';
+
 
 const Navbar = () => {
-  // const [isDarkMode, setDarkMode] = useState(false);
-
-  // const toggleDarkMode = () => {
-  //   setDarkMode(checked);
-  // };
   return (
     <>
       <nav>
@@ -21,12 +15,6 @@ const Navbar = () => {
           <div className="flex items-center cursor-pointer text-gray-900">
             <img src={Moon} alt="" className="h-8 text-white" />
 
-            {/* <DarkModeSwitch
-      style={{ marginBottom: '2rem' }}
-      checked={isDarkMode}
-      onChange={toggleDarkMode}
-      size={120}
-    /> */}
             <h2 className="font-bold tracking-wide text-xl">Dark Mode</h2>
           </div>
         </div>
