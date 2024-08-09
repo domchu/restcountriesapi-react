@@ -19,7 +19,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @apply bg-gray-200 dark:bg-gray-900
+}
+body{
+  @apply bg-gray-200 dark:bg-black
+
 }
 
 

@@ -35,10 +35,10 @@ const SingleCountry = () => {
             >
               <img src={item.flags.svg} alt={item.name.common} />
               <article>
-                <h2 className="font-bold text-gray-900 tex-3xl lg:text-5xl">
+                <h2 className="font-bold text-gray-900 tex-3xl lg:text-5xl dark:text-white">
                   {item.name.official}
                 </h2>
-                <ul className="my-4 flex flex-col items-start justify-start gap-2 text-slate-700 dark:text-gray-400">
+                <ul className="my-4 flex flex-col items-start justify-start gap-2 dark:text-gray-400">
                   <li>Capital: {item.capital}</li>
                   <li>Population: {item.population.toLocaleString()}</li>
                   <li>Region: {item.region} </li>

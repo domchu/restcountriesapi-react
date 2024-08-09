@@ -6,6 +6,11 @@ import Navbar from "./Navbar";
 const Countries = () => {
   const [countries, setCountries] = useState([]);
   const [searchText, setSearchText] = useState([]);
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   const regions = [
     {
@@ -85,16 +90,16 @@ const Countries = () => {
 
   return (
     <>
-      <div>
+      <div className={`${darkMode && "dark"}`}>
         {/* NAVBAR */}
-        <Navbar />
+        <Navbar toggleDarkMode={toggleDarkMode} />
         {!countries ? (
-          <h1 className="flex justify-center items-center text-center h-screen text-gray-800 text-3xl tracking-wide font-bold dark:text-white">
+          <h1 className="flex justify-center items-center text-center h-screen text-gray-800 text-3xl tracking-wide font-bold dark:text-white dark:bg-black">
             Loading...
           </h1>
         ) : (
           <>
-            <section className="container mx-auto p-8">
+            <section className="container mx-auto p-8 dark:bg-black dark:text-white">
               {/* FORM AT THE TOPNAV*/}
 
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8 lg:justify-between">
