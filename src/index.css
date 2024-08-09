@@ -19,10 +19,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-body{
   @apply bg-gray-200 dark:bg-black
+}
+/* body{
 
+} */
+button svg{
+  @apply h-5 w-6;
 }
 
 

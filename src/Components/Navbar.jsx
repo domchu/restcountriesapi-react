@@ -1,4 +1,6 @@
-// import  from "react";
+import { useState } from "react";
+import { FaMoon } from "react-icons/fa";
+import { MdOutlineLightMode } from "react-icons/md";
 
 const Navbar = ({ toggleDarkMode, darkMode }) => {
   return (
@@ -12,13 +14,13 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
           </div>
           <div className="flex items-center">
             <button
-              className="w-14 h-14 bottom-14 right-14 rounded-full bg-neutral-500 dark:bg-black dark:text-white dark:rounded-full items-center cursor-pointer text-black"
+              // className="w-14 h-14 bottom-14 right-14 rounded-full bg-neutral-500 dark:bg-black dark:text-white dark:rounded-full items-center cursor-pointer text-black"
               onClick={toggleDarkMode}
             >
-              {darkMode ? "Light" : "Dark"}
+              {darkMode ? <MdOutlineLightMode /> : <FaMoon />}
             </button>
             <h3 className="ml-2 font-bold text-gray-900 dark:text-white">
-              Dark Mode
+              {darkMode ? "Dark" : "Light"} Mode
             </h3>
           </div>
         </div>

@@ -92,7 +92,7 @@ const Countries = () => {
     <>
       <div className={`${darkMode && "dark"}`}>
         {/* NAVBAR */}
-        <Navbar toggleDarkMode={toggleDarkMode} />
+        <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
         {!countries ? (
           <h1 className="flex justify-center items-center text-center h-screen text-gray-800 text-3xl tracking-wide font-bold dark:text-white dark:bg-black">
             Loading...
