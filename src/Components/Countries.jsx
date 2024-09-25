@@ -99,7 +99,7 @@ const Countries = () => {
           </h1>
         ) : (
           <>
-            <section className="container mx-auto p-8 dark:bg-black dark:text-white">
+            <section className="container w-full mx-auto p-8 dark:bg-black dark:text-white">
               {/* FORM AT THE TOPNAV*/}
 
               <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8 lg:justify-between">

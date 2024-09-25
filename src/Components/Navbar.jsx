@@ -6,7 +6,7 @@ const Navbar = ({ toggleDarkMode, darkMode }) => {
   return (
     <>
       <nav className={`${darkMode && "dark"}`}>
-        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-4 lg:justify-between bg-white w-full h-24 p-10 shadow-md dark:bg-black dark:text-white">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between  lg:justify-between bg-white w-full h-24 p-10 shadow-md dark:bg-black dark:text-white">
           <div>
             <h1 className="font-bold text-2xl text-gray-900 dark:text-white">
               Where is the world!
